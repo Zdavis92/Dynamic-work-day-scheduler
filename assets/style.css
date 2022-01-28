@@ -69,7 +69,8 @@ body {
 
 .saveBtn i:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
+  color: #000000;
+  transition: .5s ease-in-out;
 }
 
 i.fa-save {
