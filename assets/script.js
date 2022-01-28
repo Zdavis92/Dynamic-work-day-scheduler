@@ -11,15 +11,18 @@ var createTimeBlock = function() {
         var hourEl = $("<div>").addClass("hour col-1")
         var textEl = $("<div>").attr("id", hoursArr[i]).addClass("textarea col-10")
         var saveEl = $("<div>").addClass("saveBtn col-1").append('<i class="fas fa-save"></i>')
+        if (currentHour === parseInt(hoursArr[i])) {
+            $(textEl).addClass("present")
+        }
+        else if (currentHour < parseInt(hoursArr[i])) {
+            $(textEl).addClass("future")
+        }
+        else {
+            $(textEl).addClass("past")
+        }
         hourEl.append(hoursAmPm[i])
         divEl.append(hourEl, textEl, saveEl)
         $(".container").append(divEl)
-    }
-}
-
-var checkHour = function() {
-    if (currentHour === parseInt(hoursArr[i])) {
-        textEl.addClass("present")
     }
 }
 
