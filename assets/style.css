@@ -70,10 +70,14 @@ body {
 .saveBtn i:hover {
   font-size: 20px;
   color: #000000;
-  transition: .5s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 i.fa-save {
   font-size: 38px;
   margin-top: 18px;
+}
+
+.textBox {
+  width: 40vw;
 }

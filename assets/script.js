@@ -10,6 +10,7 @@ var createTimeBlock = function() {
         var divEl = $("<div>").addClass("row time-block")
         var hourEl = $("<div>").addClass("hour col-1")
         var textEl = $("<div>").attr("id", hoursArr[i]).addClass("textarea col-10")
+        var textArea = $("<p>").text("task")
         var saveEl = $("<div>").addClass("saveBtn col-1").append('<i class="fas fa-save"></i>')
         if (currentHour === parseInt(hoursArr[i])) {
             $(textEl).addClass("present")
@@ -20,6 +21,7 @@ var createTimeBlock = function() {
         else {
             $(textEl).addClass("past")
         }
+        textEl.append(textArea)
         hourEl.append(hoursAmPm[i])
         divEl.append(hourEl, textEl, saveEl)
         $(".container").append(divEl)
@@ -27,3 +29,16 @@ var createTimeBlock = function() {
 }
 
 createTimeBlock();
+
+$(".textarea").on("click", "p", function() {
+    var text = $(this).text().trim();
+    var textInput = $("<textarea>").addClass("textBox").val(text);
+    $(this).replaceWith(textInput);
+    textInput.trigger("focus");
+});
+
+$(".saveBtn").on("click", function() {
+    var text = $("textarea").val();
+    var taskP = $("<p>").text(text)
+    $("textarea").replaceWith(taskP)
+});
