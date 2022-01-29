@@ -19,7 +19,68 @@ $("#currentDay").append(currentDay);
 var loadTasks = function() {
     Tasks = JSON.parse(localStorage.getItem("savedTasks"));
     $("#09").empty()
-    $("#09").append("<p>" + Tasks.hour9 + "<p>");
+    if (Tasks.hour9 === "") {
+        $("#09").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#09").append("<p>" + Tasks.hour9 + "<p>");
+    }
+    $("#10").empty()
+    if (Tasks.hour10 === "") {
+        $("#10").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#10").append("<p>" + Tasks.hour10 + "<p>");
+    }
+    $("#11").empty()
+    if (Tasks.hour11 === "") {
+        $("#11").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#11").append("<p>" + Tasks.hour11 + "<p>");
+    }
+    $("#12").empty()
+    if (Tasks.hour12 === "") {
+        $("#12").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#12").append("<p>" + Tasks.hour12 + "<p>");
+    }
+    $("#13").empty()
+    if (Tasks.hour13 === "") {
+        $("#13").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#13").append("<p>" + Tasks.hour13 + "<p>");
+    }
+    $("#14").empty()
+    if (Tasks.hour14 === "") {
+        $("#14").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#14").append("<p>" + Tasks.hour14 + "<p>");
+    }
+    $("#15").empty()
+    if (Tasks.hour15 === "") {
+        $("#15").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#15").append("<p>" + Tasks.hour15 + "<p>");
+    }
+    $("#16").empty()
+    if (Tasks.hour16 === "") {
+        $("#16").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#16").append("<p>" + Tasks.hour16 + "<p>");
+    }
+    $("#17").empty()
+    if (Tasks.hour17 === "") {
+        $("#17").append("<p>Click to add a new task<p>")
+    }
+    else {
+        $("#17").append("<p>" + Tasks.hour17 + "<p>");
+    }
 }
 
 var createTimeBlock = function() {
