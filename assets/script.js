@@ -12,7 +12,7 @@ var createTimeBlock = function() {
         var textEl = $("<div>").attr("id", hoursArr[i]).addClass("textarea col-10")
         var textArea = $("<p>").text("task")
         var saveEl = $("<div>").addClass("saveBtn col-1").append('<i class="fas fa-save"></i>')
-        if (currentHour === parseInt(hoursArr[i])) {
+        if (currentHour == parseInt(hoursArr[i])) {
             $(textEl).addClass("present")
         }
         else if (currentHour < parseInt(hoursArr[i])) {
